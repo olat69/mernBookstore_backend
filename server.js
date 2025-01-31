@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const https = require("https");
 const mongoose = require("mongoose");
 
 const port = process.env.PORT || 5000;
@@ -47,8 +48,6 @@ main()
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
-const https = require("https");
 
 const params = JSON.stringify({
   email: "customer@email.com",
